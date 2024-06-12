@@ -92,7 +92,7 @@
 		showUsername = $settings.showUsername ?? false;
 		chatBubble = $settings.chatBubble ?? true;
 		widescreenMode = $settings.widescreenMode ?? false;
-		splitLargeChunks = $settings.splitLargeChunks ?? false;
+		splitLargeChunks = $settings.splitLargeChunks ?? true;
 		chatDirection = $settings.chatDirection ?? 'LTR';
 
 		defaultModelId = ($settings?.models ?? ['']).at(0);
