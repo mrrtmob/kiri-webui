@@ -15,7 +15,7 @@
 	let titleAutoGenerate = true;
 	let responseAutoCopy = false;
 	let widescreenMode = false;
-	let splitLargeChunks = false;
+	let splitLargeChunks = true;
 
 	// Interface
 	let defaultModelId = '';
