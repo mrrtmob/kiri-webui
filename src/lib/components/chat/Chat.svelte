@@ -961,7 +961,7 @@
 			scrollToBottom();
 
 			if (res && res.ok && res.body) {
-				const textStream = await createOpenAITextStream(res.body, $settings.splitLargeChunks);
+				const textStream = await createOpenAITextStream(res.body, ($settings && $settings.splitLargeChunks) ?? true);
 				let lastUsage = null;
 
 				for await (const update of textStream) {
