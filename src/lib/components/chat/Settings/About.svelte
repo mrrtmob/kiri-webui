@@ -6,7 +6,6 @@
 	import { compareVersion } from '$lib/utils';
 	import { onMount, getContext } from 'svelte';
 
-
 	import Tooltip from '$lib/components/common/Tooltip.svelte';
 
 	const i18n = getContext('i18n');
@@ -70,15 +69,16 @@
 								: $i18n.t('(latest)')}
 						</a>
 					</div>
-
-					<button
-						class=" underline flex items-center space-x-1 text-xs text-gray-500 dark:text-gray-500"
-						on:click={() => {
-							showChangelog.set(true);
-						}}
-					>
-						<div>{$i18n.t("See what's new")}</div>
-					</button>
+					{#if $user.role === 'admin'}
+						<button
+							class=" underline flex items-center space-x-1 text-xs text-gray-500 dark:text-gray-500"
+							on:click={() => {
+								showChangelog.set(true);
+							}}
+						>
+							<div>{$i18n.t("See what's new")}</div>
+						</button>
+					{/if}
 				</div>
 
 				<button
@@ -135,7 +135,7 @@
 				{#if !$WEBUI_NAME.includes('Open WebUI')}
 					<span class=" text-gray-500 dark:text-gray-300 font-medium">{$WEBUI_NAME}</span> -
 				{/if}
-			{$i18n.t('Created by')}
+				{$i18n.t('Created by')}
 				<a
 					class=" text-gray-500 dark:text-gray-300 font-medium"
 					href="https://github.com/tjbck"
