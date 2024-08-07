@@ -147,7 +147,6 @@
 		chatBubble = $settings.chatBubble ?? true;
 		widescreenMode = $settings.widescreenMode ?? false;
 		splitLargeChunks = $settings.splitLargeChunks ?? true;
-		splitLargeChunks = $settings.splitLargeChunks ?? false;
 		scrollOnBranchChange = $settings.scrollOnBranchChange ?? true;
 		chatDirection = $settings.chatDirection ?? 'LTR';
 		userLocation = $settings.userLocation ?? false;
